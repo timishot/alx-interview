@@ -25,9 +25,4 @@ def pascal_triangle(n):
 
     return triangle
 
-# Test the function with the provided example
-if __name__ == "__main__":
-    # Test with n = 5
-    result_triangle = pascal_triangle(5)
-    for row in result_triangle:
-        print(row)
+
