@@ -1,13 +1,20 @@
 #!/usr/bin/python3
 
 def canUnlockAll(boxes):
-    if len(boxes) == 0:
+    if not boxes:
         return False
     
-    for index, innerBox in enumerate(boxes):
-        if index == len(boxes) - 1 and len(innerBox) == 0:
-            return True
-        if len(innerBox) == 0:
-            return False
-    
-    return True
+    visited = set()
+    queue = deque([0])  # Start with the first box (index 0)
+    visited.add(0)
+
+    while queue:
+        current_box = queue.popleft()
+        keys = boxes[current_box]
+
+        for key in keys:
+            if key < len(boxes) and key not in visited:
+                visited.add(key)
+                queue.append(key)
+
+    return len(visited) == len(boxes)
