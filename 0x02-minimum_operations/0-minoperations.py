@@ -35,6 +35,6 @@ def minOperations(n):
     # If n is less than or equal to 1, return 0
     if n <= 1:
         return 0
-    # Find the prime factors of n
+    # Find the prime factors of n is now
     factors = primeFactors(n)
     return sum(factors)
