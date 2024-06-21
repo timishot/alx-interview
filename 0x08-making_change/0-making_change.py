@@ -17,4 +17,4 @@ def makeChange(coins, total):
         usedCoins += r
         if currTotalCoins == total:
             return usedCoins
-    return -1
+    return -1// return -1
