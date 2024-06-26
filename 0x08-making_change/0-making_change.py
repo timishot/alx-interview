@@ -12,9 +12,9 @@ def makeChange(coins, total):
     usedCoins = 0
     coins = sorted(coins, reverse=True)
     for coin in coins:
-        r = (total - currTotalCoins)
+        r = (total - currTotalCoins) // coin
         currTotalCoins += r * coin
         usedCoins += r
         if currTotalCoins == total:
             return usedCoins
-    return -1 
+    return -1
