@@ -27,7 +27,7 @@ def isWinner(x, nums):
         ben_wins += primes_count % 2 == 0
         maria_wins += primes_count % 2 == 1
 
-    # Determine the winner based on the comparison of Maria's and Ben's wins
+    '''Determine the winner based on the comparison of Maria's and Ben's wins '''
     if maria_wins == ben_wins:
         return None
     return 'Maria' if maria_wins > ben_wins else 'Ben'
