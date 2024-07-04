@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
 """
 module of the game
 """
+
 
 def isWinner(x, nums):
     """consider x rounds and num an array 
